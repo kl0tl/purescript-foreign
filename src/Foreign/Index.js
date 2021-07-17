@@ -1,13 +1,13 @@
 "use strict";
 
-exports.unsafeReadPropImpl = function (f, s, key, value) {
+export var unsafeReadPropImpl = function (f, s, key, value) {
   return value == null ? f : s(value[key]);
 };
 
-exports.unsafeHasOwnProperty = function (prop, value) {
+export var unsafeHasOwnProperty = function (prop, value) {
   return Object.prototype.hasOwnProperty.call(value, prop);
 };
 
-exports.unsafeHasProperty = function (prop, value) {
+export var unsafeHasProperty = function (prop, value) {
   return prop in value;
 };
